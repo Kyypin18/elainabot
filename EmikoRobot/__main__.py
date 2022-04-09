@@ -83,25 +83,29 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/11b5922a33de9968cedfe.jpg)
-────────────────────────
-× *Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
-────────────────────────
-✪ Hit /help to see my available commands.
+۞ 𝑺𝒂𝒚𝒂 𝑨𝒅𝒂𝒍𝒂𝒉 𝑹𝒐𝒃𝒐𝒕 𝑴𝒂𝒏𝒂𝒈𝒆𝒓 𝑩𝒆𝒓𝒕𝒆𝒎𝒂 𝑨𝒏𝒊𝒎𝒆 [☆](https://telegra.ph/file/282542026d3570aedf7c1.jpg)
+✖───────────✜──────────✖
+✘ *© :* [𝑰𝑲𝑰](https://t.me/skytrixsz)
+✘ *𝑨𝒌𝒕𝒊𝒇 𝑺𝒆𝒍𝒂𝒎𝒂:* `{}`
+✘ `{}` *users, across* `{}` *chats.*
+✖───────────✜──────────✖
+❀ 𝑻𝒂𝒑 /help 𝑨𝒕𝒂𝒖 𝑻𝒆𝒌𝒂𝒏 𝑻𝒐𝒎𝒃𝒐𝒍 𝑨𝒕𝒂𝒖 𝑩𝒖𝒕𝒕𝒐𝒏 𝑫𝒊 𝑩𝒂𝒘𝒂𝒉.
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="About Emiko Robot", callback_data="emiko_"),
+        InlineKeyboardButton(text="᯽ 𝑨𝒃𝒐𝒖𝒕 ᯽", callback_data="emiko_"),
     ],
     [
-        InlineKeyboardButton(text="Get Help", callback_data="help_back"),
-        InlineKeyboardButton(text="Try inline!​​", switch_inline_query_current_chat=""),
+        InlineKeyboardButton(text="ꕥ 𝑶𝒘𝒏𝒆𝒓 ꕥ", url=f"t.me/skytrixsz"),
+    ],
+    [
+        InlineKeyboardButton(text="᯽ 𝑴𝒆𝒏𝒖 ᯽", callback_data="help_back"),
+        InlineKeyboardButton(text="᯽ 𝑰𝒏𝒍𝒊𝒏𝒆 ᯽", switch_inline_query_current_chat=""),
     ],
     [
         InlineKeyboardButton(
-            text="➗ Add Emiko To Your Group ➗", url=f"t.me/{bu}?startgroup=new"
+            text="✙ 𝑻𝒂𝒎𝒃𝒂𝒉 𝑺𝒂𝒚𝒂 𝑲𝒆 𝑮𝒓𝒖𝒑 ✙", url=f"t.me/{bu}?startgroup=new"
         ),
     ],
 ]
