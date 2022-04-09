@@ -112,7 +112,7 @@ buttons = [
 
 
 HELP_STRINGS = """
-Click on the button bellow to get description about specifics command."""
+*𝑻𝒆𝒌𝒂𝒏 𝑻𝒐𝒎𝒃𝒐𝒍 𝑫𝒊𝒃𝒂𝒘𝒂𝒉, 𝑼𝒏𝒕𝒖𝒌 𝑴𝒆𝒍𝒊𝒉𝒂𝒕 𝑳𝒊𝒉𝒂𝒕 𝑴𝒆𝒏𝒖 𝑫𝒊 𝑩𝒂𝒘𝒂𝒉 𝒊𝒏𝒊 @skytrixsz*."""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -370,15 +370,15 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_":
         query.message.edit_text(
-            text="๏ I'm *Emiko*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Emiko's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for EmikoRobot.",
+            text="๏ Saya *Toji*, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah."
+            "\n• Saya dapat membatasi pengguna."
+            "\n• Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup."
+            "\n• Saya memiliki sistem anti-flood yang canggih."
+            "\n• Saya dapat memperingatkan pengguna sampai mereka mencapai peringatan maksimal, dengan setiap tindakan yang telah ditentukan seperti ban, mute, kick, etc."
+            "\n• Saya memiliki sistem pencatatan, blacklists, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu."
+            "\n• Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang"
+            "\n\n_Toji's dilisensikan di bawah Lisensi Publik Umum GNU v3.0_"
+            "\n\n Klik tombol di bawah untuk mendapatkan bantuan dasar untuk TojiRobot.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -399,8 +399,8 @@ def emiko_about_callback(update, context):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Source Code",
-                            url="https://github.com/kennedy-ex/EmikoRobot",
+                            text="owner",
+                            url="https://t.me/skytrixsz",
                         ),
                     ],
                     [
@@ -429,14 +429,14 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_admin":
         query.message.edit_text(
-            text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, EmikoRobot now ready to manage your group."
-            "\n\n*Admin Tools*"
-            "\nBasic Admin tools help you to protect and powerup your group."
-            "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
-            "\n\n*Greetings*"
-            "\nLets set a welcome message to welcome new users coming to your group."
-            "\nsend `/setwelcome [message]` to set a welcome message!",
+            text=f"*๏ Ayo buat grup Anda sedikit efektif sekarang*"
+            "\nSelamat, TojiRobot sekarang siap untuk mengelola grup Anda."
+            "\n\n*Admin Peralatan*"
+            "\nAlat Admin dasar membantu Anda melindungi dan memperkuat grup Anda."
+            "\nAnda dapat mencekal anggota, Menendang anggota, Mempromosikan seseorang sebagai admin melalui perintah bot."
+            "\n\n*Salam pembuka*"
+            "\nMari atur pesan selamat datang untuk menyambut pengguna baru yang datang ke grup Anda."
+            "\nKirim `/setwelcome [pesan]` untuk mengatur pesan selamat datang!",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -446,10 +446,10 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_notes":
         query.message.edit_text(
-            text=f"<b>๏ Setting up notes</b>"
-            f"\nYou can save message/media/audio or anything as notes"
-            f"\nto get a note simply use # at the beginning of a word"
-            f"\n\nYou can also set buttons for notes and filters (refer help menu)",
+            text=f"<b>๏ Menyiapkan catatan</b>"
+            f"\nAnda dapat menyimpan pesan/media/audio atau apa pun sebagai catatan"
+            f"\nuntuk mendapatkan catatan cukup gunakan # di awal kata"
+            f"\n\nAnda juga dapat mengatur tombol untuk catatan dan filter (lihat menu bantuan)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
@@ -457,15 +457,15 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*๏ Emiko support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Emiko.",
+            text="*๏ Toji support chats*"
+            "\nBergabunglah dengan Grup/Saluran Dukungan Saya untuk melihat atau melaporkan masalah di Toji.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Support", url="t.me/emikosupport"),
+                        InlineKeyboardButton(text="Support", url="t.me/wibuhouse"),
                         InlineKeyboardButton(
-                            text="Updates", url="https://t.me/KennedyProject"
+                            text="Updates", url="https://t.me/skytrixch"
                         ),
                     ],
                     [
@@ -477,49 +477,17 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_credit":
         query.message.edit_text(
-            text=f"๏ Credis for Emiko\n"
-            "\nHere Developers Making And Give Inspiration For Made The EmikoRobot",
+            text=f"๏ Kredit untuk Toji\n"
+            "\nDisini Developer Membuat Dan Memberikan Inspirasi Untuk Membuatnya Tojirobot",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="sena-ex", url="https://github.com/kennedy-ex"
+                            text="Support", url="https://t.me/wibuhouse"
                         ),
                         InlineKeyboardButton(
-                            text="TheHamkerCat", url="https://github.com/TheHamkerCat"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="Feri", url="https://github.com/FeriEXP"
-                        ),
-                        InlineKeyboardButton(
-                            text="riz-ex", url="https://github.com/riz-ex"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="Anime Kaizoku", url="https://github.com/animekaizoku"
-                        ),
-                        InlineKeyboardButton(
-                            text="TheGhost Hunter", url="https://github.com/HuntingBots"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="Inuka Asith", url="https://github.com/inukaasith"
-                        ),
-                        InlineKeyboardButton(
-                            text="Noob-Kittu", url="https://github.com/noob-kittu"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="Queen Arzoo", url="https://github.com/QueenArzoo"
-                        ),
-                        InlineKeyboardButton(
-                            text="Paul Larsen", url="https://github.com/PaulSonOfLars"
+                            text="Update", url="https://t.me/skytrixch"
                         ),
                     ],
                     [
@@ -534,17 +502,17 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text="๏›› This advance command for Musicplayer."
-            "\n\n๏ Command for admins only."
-            "\n • `/reload` - For refreshing the adminlist."
-            "\n • `/pause` - To pause the playback."
-            "\n • `/resume` - To resuming the playback You've paused."
-            "\n • `/skip` - To skipping the player."
-            "\n • `/end` - For end the playback."
-            "\n • `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
-            "\n\n๏ Command for all members."
-            "\n • `/play` <query /reply audio> - Playing music via YouTube."
-            "\n • `/playlist` - To playing a playlist of groups or your personal playlist",
+            text="๏›› Perintah lanjutan ini untuk Musicplayer."
+            "\n\n๏ Perintah hanya untuk admin."
+            "\n • `/reload` - Untuk menyegarkan daftar admin."
+            "\n • `/pause` - Untuk menjeda pemutaran."
+            "\n • `/resume` - Untuk melanjutkan pemutaran Anda telah menjeda."
+            "\n • `/skip` - Untuk melewatkan pemain."
+            "\n • `/end` - Untuk mengakhiri pemutaran."
+            "\n • `/musicplayer <on/off>` - Beralih untuk MENGAKTIFKAN atau MENONAKTIFKAN pemutar musik."
+            "\n\n๏ Perintah untuk semua anggota."
+            "\n • `/play` <query /reply audio> - Memutar musik melalui YouTube."
+            "\n • `/playlist` - Untuk memutar daftar putar grup atau daftar putar pribadi Anda",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
