@@ -1,165 +1,129 @@
-import random, html
+from typing import Optional
+import random
 
-from EmikoRobot import dispatcher
-from EmikoRobot.modules.disable import (
-    DisableAbleCommandHandler,
-    DisableAbleMessageHandler,
-)
-from EmikoRobot.modules.sql import afk_sql as sql
-from EmikoRobot.modules.users import get_user_id
-from telegram import MessageEntity, Update
+from telegram import Message, User
+from telegram import MessageEntity, ParseMode
 from telegram.error import BadRequest
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
-from telegram.ext import (
-    CallbackContext,
-    CallbackQueryHandler,
-    CommandHandler,
-    Filters,
-    MessageHandler,
-    run_async,
-)
+from telegram.ext import Filters, MessageHandler, run_async
+
+from DionRobot import dispatcher
+from DionRobot.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+from DionRobot.modules.sql import afk_sql as sql
+from DionRobot.modules.users import get_user_id
+
+from DionRobot.modules.helper_funcs.alternate import send_message
+import DionRobot.modules.helper_funcs.fun_strings as fun
 
 AFK_GROUP = 7
 AFK_REPLY_GROUP = 8
 
 
-def afk(update: Update, context: CallbackContext):
+@run_async
+def afk(update, context):
     args = update.effective_message.text.split(None, 1)
-    user = update.effective_user
-
-    if not user:  # ignore channels
-        return
-
-    if user.id in [777000, 1087968824]:
-        return
-
-    notice = ""
     if len(args) >= 2:
         reason = args[1]
-        if len(reason) > 100:
-            reason = reason[:100]
-            notice = "\nYour afk reason was shortened to 100 characters."
     else:
         reason = ""
 
     sql.set_afk(update.effective_user.id, reason)
-    fname = update.effective_user.first_name
-    try:
-        update.effective_message.reply_text("{} is now away!{}".format(fname, notice))
-    except BadRequest:
-        pass
+    afkstr = random.choice(fun.AFK)
+    update.effective_message.reply_text(afkstr.format(update.effective_user.first_name))
 
 
-def no_longer_afk(update: Update, context: CallbackContext):
-    user = update.effective_user
-    message = update.effective_message
+@run_async
+def no_longer_afk(update, context):
+    user = update.effective_user  # type: Optional[User]
 
     if not user:  # ignore channels
         return
 
     res = sql.rm_afk(user.id)
     if res:
-        if message.new_chat_members:  # dont say msg
-            return
-        firstname = update.effective_user.first_name
-        try:
-            options = [
-                "{} is here!",
-                "{} is back!",
-                "{} is now in the chat!",
-                "{} is awake!",
-                "{} is back online!",
-                "{} is finally here!",
-                "Welcome back! {}",
-                "Where is {}?\nIn the chat!",
-            ]
-            chosen_option = random.choice(options)
-            update.effective_message.reply_text(chosen_option.format(firstname))
-        except:
-            return
+        noafkstr = random.choice(fun.NOAFK)
+        update.effective_message.reply_text(noafkstr.format(user.first_name))
 
 
-def reply_afk(update: Update, context: CallbackContext):
-    bot = context.bot
-    message = update.effective_message
-    userc = update.effective_user
-    userc_id = userc.id
-    if message.entities and message.parse_entities(
+@run_async
+def reply_afk(update, context):
+    message = update.effective_message  # type: Optional[Message]
+
+    entities = message.parse_entities(
         [MessageEntity.TEXT_MENTION, MessageEntity.MENTION]
-    ):
-        entities = message.parse_entities(
-            [MessageEntity.TEXT_MENTION, MessageEntity.MENTION]
-        )
-
-        chk_users = []
+    )
+    if message.entities and entities:
         for ent in entities:
             if ent.type == MessageEntity.TEXT_MENTION:
                 user_id = ent.user.id
                 fst_name = ent.user.first_name
 
-                if user_id in chk_users:
+            elif ent.type == MessageEntity.MENTION:
+                user_id = get_user_id(
+                    message.text[ent.offset : ent.offset + ent.length]
+                )
+                if not user_id:
+                    # Should never happen, since for a user to become AFK they must have spoken. Maybe changed username?
                     return
-                chk_users.append(user_id)
+                try:
+                    chat = context.bot.get_chat(user_id)
+                except BadRequest:
+                    print("Error in afk can't get user id {}".format(user_id))
+                    return
+                fst_name = chat.first_name
 
-            if ent.type != MessageEntity.MENTION:
+            else:
                 return
 
-            user_id = get_user_id(message.text[ent.offset : ent.offset + ent.length])
-            if not user_id:
-                # Should never happen, since for a user to become AFK they must have spoken. Maybe changed username?
-                return
-
-            if user_id in chk_users:
-                return
-            chk_users.append(user_id)
-
-            try:
-                chat = bot.get_chat(user_id)
-            except BadRequest:
-                print("Error: Could not fetch userid {} for AFK module".format(user_id))
-                return
-            fst_name = chat.first_name
-
-            check_afk(update, context, user_id, fst_name, userc_id)
-
-    elif message.reply_to_message:
-        user_id = message.reply_to_message.from_user.id
-        fst_name = message.reply_to_message.from_user.first_name
-        check_afk(update, context, user_id, fst_name, userc_id)
+            if sql.is_afk(user_id):
+                valid, reason = sql.check_afk_status(user_id)
+                if valid:
+                    if not reason:
+                        rplafkstr = random.choice(fun.AFKRPL)
+                        res = rplafkstr.format(fst_name)
+                    else:
+                        res = f"<b>{fst_name}</b> is away from keyboard! says it's because of \n{reason}"
+                    send_message(
+                        update.effective_message, res, parse_mode=ParseMode.HTML
+                    )
 
 
-def check_afk(update, context, user_id, fst_name, userc_id):
-    if sql.is_afk(user_id):
-        user = sql.check_afk_status(user_id)
-        if int(userc_id) == int(user_id):
-            return
-        if not user.reason:
-            res = "{} is afk".format(fst_name)
-            update.effective_message.reply_text(res)
-        else:
-            res = "{} is afk.\nReason: <code>{}</code>".format(
-                html.escape(fst_name), html.escape(user.reason)
-            )
-            update.effective_message.reply_text(res, parse_mode="html")
+def __user_info__(user_id):
+    is_afk = sql.is_afk(user_id)
+
+    text = "<b>Currently AFK</b>: {}"
+    if is_afk:
+        text = text.format("Yes")
+
+    else:
+        text = text.format("No")
+    return text
 
 
-AFK_HANDLER = DisableAbleCommandHandler("afk", afk, run_async=True)
+def __gdpr__(user_id):
+    sql.rm_afk(user_id)
+
+
+__help__ = """
+When marked as AFK, any mentions will be replied to with a message to say you're not available!
+ × /afk <reason>: Mark yourself as AFK.
+ × brb <reason>: Same as the afk command - but not a command.
+"""
+
+__mod_name__ = "BRB"
+
+
+AFK_HANDLER = DisableAbleCommandHandler("afk", afk)
 AFK_REGEX_HANDLER = DisableAbleMessageHandler(
-    Filters.regex(r"^(?i)brb(.*)$"), afk, friendly="afk", run_async=True
+    Filters.regex("(?i)brb"), afk, friendly="afk"
 )
-NO_AFK_HANDLER = MessageHandler(Filters.all & Filters.chat_type.groups, no_longer_afk)
-AFK_REPLY_HANDLER = MessageHandler(Filters.all & Filters.chat_type.groups, reply_afk)
+NO_AFK_HANDLER = MessageHandler(
+    Filters.all & Filters.group & ~Filters.update.edited_message, no_longer_afk
+)
+AFK_REPLY_HANDLER = MessageHandler(Filters.all & Filters.group, reply_afk)
+# AFK_REPLY_HANDLER = MessageHandler(Filters.entity(MessageEntity.MENTION) | Filters.entity(MessageEntity.TEXT_MENTION),
+#                                   reply_afk)
 
 dispatcher.add_handler(AFK_HANDLER, AFK_GROUP)
 dispatcher.add_handler(AFK_REGEX_HANDLER, AFK_GROUP)
 dispatcher.add_handler(NO_AFK_HANDLER, AFK_GROUP)
 dispatcher.add_handler(AFK_REPLY_HANDLER, AFK_REPLY_GROUP)
-
-__mod_name__ = "Afk​"
-__command_list__ = ["afk"]
-__handlers__ = [
-    (AFK_HANDLER, AFK_GROUP),
-    (AFK_REGEX_HANDLER, AFK_GROUP),
-    (NO_AFK_HANDLER, AFK_GROUP),
-    (AFK_REPLY_HANDLER, AFK_REPLY_GROUP),
-]
