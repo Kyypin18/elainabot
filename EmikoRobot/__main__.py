@@ -82,26 +82,25 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hello {} !*
-۞ 𝑺𝒂𝒚𝒂 𝑨𝒅𝒂𝒍𝒂𝒉 𝑹𝒐𝒃𝒐𝒕 𝑴𝒂𝒏𝒂𝒈𝒆𝒓 𝑩𝒆𝒓𝒕𝒆𝒎𝒂 𝑨𝒏𝒊𝒎𝒆 [☆](https://telegra.ph/file/282542026d3570aedf7c1.jpg)
-✖───────────✜──────────✖
-✘ *© :* [𝑰𝑲𝑰](https://t.me/skytrixsz)
-✘ *𝑨𝒌𝒕𝒊𝒇 𝑺𝒆𝒍𝒂𝒎𝒂:* `{}`
-✘ `{}` *users, across* `{}` *chats.*
-✖───────────✜──────────✖
+*Hᴀʟʟᴏ {} !*
+۞ sᴀʏᴀ ᴀᴅᴀʟᴀʜ ʀᴏʙᴏᴛ ᴍᴀɴᴀᴊᴇᴍᴇɴ ʙᴇʀᴛᴇᴍᴀ ᴡɪʙᴜ [🌟](https://telegra.ph/file/282542026d3570aedf7c1.jpg)
+┏━━━━━━━━━━━━━━━━━━━━━━┓
+┃ *ᴀᴋғɪғ sᴇʟᴀᴍᴀ:* `{}`
+┃ `{}` *ᴘᴇɴɢɢᴜɴᴀ,* * ᴅᴀɴ,* `{}` *ᴏʙʀᴏʟᴀɴ.*
+┗━━━━━━━━━━━━━━━━━━━━━━┛
 ❀ 𝑻𝒂𝒑 /help 𝑨𝒕𝒂𝒖 𝑻𝒆𝒌𝒂𝒏 𝑻𝒐𝒎𝒃𝒐𝒍 𝑨𝒕𝒂𝒖 𝑩𝒖𝒕𝒕𝒐𝒏 𝑫𝒊 𝑩𝒂𝒘𝒂𝒉.
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="᯽ 𝑨𝒃𝒐𝒖𝒕 ᯽", callback_data="emiko_"),
+        InlineKeyboardButton(text="✘ 𝑨𝒃𝒐𝒖𝒕 ✘", callback_data="emiko_"),
     ],
     [
-        InlineKeyboardButton(text="ꕥ 𝑶𝒘𝒏𝒆𝒓 ꕥ", url=f"t.me/skytrixsz"),
+        InlineKeyboardButton(text="✘ 𝑶𝒘𝒏𝒆𝒓 ✘", url=f"t.me/skytrixsz"),
     ],
     [
-        InlineKeyboardButton(text="᯽ 𝑴𝒆𝒏𝒖 ᯽", callback_data="help_back"),
-        InlineKeyboardButton(text="᯽ 𝑰𝒏𝒍𝒊𝒏𝒆 ᯽", switch_inline_query_current_chat=""),
+        InlineKeyboardButton(text="⌘ 𝑴𝒆𝒏𝒖 ⌘", callback_data="help_back"),
+        InlineKeyboardButton(text="⌘ 𝑰𝒏𝒍𝒊𝒏𝒆 ⌘", switch_inline_query_current_chat=""),
     ],
     [
         InlineKeyboardButton(
@@ -115,10 +114,7 @@ HELP_STRINGS = """
 *𝑻𝒆𝒌𝒂𝒏 𝑻𝒐𝒎𝒃𝒐𝒍 𝑫𝒊𝒃𝒂𝒘𝒂𝒉, 𝑼𝒏𝒕𝒖𝒌 𝑴𝒆𝒍𝒊𝒉𝒂𝒕 𝑳𝒊𝒉𝒂𝒕 𝑴𝒆𝒏𝒖 𝑫𝒊 𝑩𝒂𝒘𝒂𝒉 𝒊𝒏𝒊 @skytrixsz*."""
 
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @excrybaby \
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """*Gak ada*"""
 
 IMPORTED = {}
 MIGRATEABLE = []
