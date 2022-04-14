@@ -103,7 +103,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(
-            text="🏘️ 𝙏𝙖𝙢𝙗𝙖𝙝 𝙎𝙖𝙮𝙖 𝙆𝙚 𝙂𝙧𝙪𝙥 𝙈𝙪 🏘️", url=f"t.me/{bu}?startgroup=new"
+            text="🏘️ 𝙏𝙖𝙢𝙗𝙖𝙝 𝙎𝙖𝙮𝙖 𝙆𝙚 𝙂𝙧𝙪𝙥 𝙈𝙪 🏘️", url=f"t.me/skytrixszbot?startgroup=new"
         ),
     ],
 ]
