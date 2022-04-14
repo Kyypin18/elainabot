@@ -375,11 +375,11 @@ def emiko_about_callback(update, context):
                         InlineKeyboardButton(
                             text="𝙏𝙚𝙣𝙩𝙖𝙣𝙜", callback_data="emiko_admin"
                         ),
-                        InlineKeyboardButton(text="Notes", callback_data="emiko_notes"),
+                        InlineKeyboardButton(text="𝙈𝙪𝙨𝙞𝙘", callback_data="emiko_notes"),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Support", callback_data="emiko_support"
+                            text="𝘼𝙡𝙡 𝙂𝙧𝙤𝙪𝙥𝙨", callback_data="emiko_support"
                         ),
                         InlineKeyboardButton(
                             text="Credits", callback_data="emiko_credit"
