@@ -3,8 +3,9 @@ _mod_name_ = "string"
 __help__ = """
  × /start - 𝙈𝙚𝙢𝙪𝙡𝙖𝙞 𝘽𝙤𝙩
  × /about - 𝙏𝙚𝙣𝙩𝙖𝙣𝙜 𝘽𝙤𝙩
- × /ping - Untuk Mengecek Ping Bot
- × /id - Untuk Mendapatkan User ID
- × /generate - Mulai Pengambilan String
- × /cancel - Membatalkan Proses Pengambilan String
- × /restart - Merestart Proses Pengambilan String
+ × /ping - 𝙈𝙚𝙣𝙜𝙚𝙘𝙚𝙠 𝙋𝙞𝙣𝙜 𝘽𝙤𝙩
+ × /id - 𝙐𝙣𝙩𝙪𝙠 𝙈𝙚𝙣𝙙𝙖𝙥𝙖𝙩 𝙐𝙨𝙚𝙧 𝙄𝙙
+ × /generate - 𝙈𝙚𝙢𝙪𝙡𝙖𝙞 𝙋𝙚𝙣𝙜𝙖𝙢𝙗𝙞𝙡𝙖𝙣 𝙎𝙩𝙧𝙞𝙣𝙜
+ × /cancel - 𝙈𝙚𝙢𝙗𝙖𝙩𝙖𝙡 𝙆𝙖𝙣 𝙋𝙚𝙣𝙜𝙖𝙢𝙗𝙞𝙡𝙖𝙣 𝙎𝙩𝙧𝙞𝙣𝙜
+ × /restart - 𝙈𝙚𝙧𝙚𝙨𝙩𝙖𝙧𝙩 𝙋𝙚𝙣𝙜𝙖𝙢𝙗𝙞𝙡𝙖𝙣 𝙎𝙩𝙧𝙞𝙣𝙜
+"""
