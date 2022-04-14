@@ -375,25 +375,25 @@ def emiko_about_callback(update, context):
                         InlineKeyboardButton(
                             text="𝙏𝙚𝙣𝙩𝙖𝙣𝙜", callback_data="emiko_admin"
                         ),
-                        InlineKeyboardButton(text="𝙈𝙪𝙨𝙞𝙘", callback_data="emiko_notes"),
+                        InlineKeyboardButton(text="𝙈𝙪𝙨𝙞𝙘", callback_data="Musicplayer"),
                     ],
                     [
                         InlineKeyboardButton(
                             text="𝘼𝙡𝙡 𝙂𝙧𝙤𝙪𝙥𝙨", callback_data="emiko_support"
                         ),
                         InlineKeyboardButton(
-                            text="Credits", callback_data="emiko_credit"
+                            text="𝘾𝙧𝙚𝙙𝙞𝙩𝙨", callback_data="emiko_credit"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="owner",
+                            text="𝙊𝙬𝙣𝙚𝙧",
                             url="https://t.me/skytrixsz",
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Go Back", callback_data="emiko_back"
+                            text="𝙆𝙚𝙢𝙗𝙖𝙡𝙞", callback_data="emiko_back"
                         ),
                     ],
                 ]
@@ -444,15 +444,15 @@ def emiko_about_callback(update, context):
         )
     elif query.data == "emiko_support":
         query.message.edit_text(
-            text="*๏ Toji support chats*"
-            "\nBergabunglah dengan Grup/Saluran Dukungan Saya untuk melihat atau melaporkan masalah di Toji.",
+            text="*๏ 𝘼𝙡𝙡 𝙂𝙧𝙤𝙪𝙥𝙨*"
+            "\n𝘽𝙚𝙧𝙜𝙖𝙗𝙪𝙣𝙜 𝙇𝙖𝙝 𝘿𝙚𝙣𝙜𝙖𝙣 𝙂𝙧𝙪𝙥 𝘼𝙩𝙖𝙪 𝙎𝙖𝙡𝙪𝙧𝙖𝙣 𝘿𝙞 𝘽𝙖𝙬𝙖𝙝 𝙄𝙣𝙞.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Support", url="t.me/wibuhouse"),
+                        InlineKeyboardButton(text="𝙂𝙧𝙤𝙪𝙥 𝙈𝙚", url="t.me/wibuhouse"),
                         InlineKeyboardButton(
-                            text="Updates", url="https://t.me/skytrixch"
+                            text="𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙈𝙚", url="https://t.me/skytrixch"
                         ),
                     ],
                     [
@@ -464,17 +464,17 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_credit":
         query.message.edit_text(
-            text=f"๏ Kredit untuk Toji\n"
-            "\nDisini Developer Membuat Dan Memberikan Inspirasi Untuk Membuatnya Tojirobot",
+            text=f"๏ 𝙆𝙧𝙚𝙙𝙞𝙩\n"
+            "\n𝙆𝙡𝙞𝙠 𝙐𝙣𝙩𝙪𝙠 𝙈𝙚𝙡𝙞𝙝𝙖𝙩 𝙎𝙞𝙖𝙥𝙖 𝙔𝙖𝙣𝙜 𝙈𝙚𝙢𝙗𝙪𝙖𝙩 𝘽𝙤𝙩 𝙄𝙣𝙞",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Support", url="https://t.me/wibuhouse"
+                            text="𝙎𝙠𝙮𝙩𝙧𝙞𝙭𝙨𝙯", url="https://t.me/skytrixsz"
                         ),
                         InlineKeyboardButton(
-                            text="Update", url="https://t.me/skytrixch"
+                            text="𝙐𝙥𝙙𝙖𝙩𝙚", url="https://t.me/skytrixch"
                         ),
                     ],
                     [
