@@ -234,7 +234,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"𝙃𝙖𝙡𝙤 𝙎𝙖𝙮𝙖 {dispatcher.bot.first_name}. 𝙎𝙚𝙣𝙖𝙣𝙜 𝘽𝙚𝙧𝙩𝙚𝙢𝙪 𝘿𝙚𝙣𝙜𝙖𝙣 𝙈𝙪 [👋](https://telegra.ph/file/f65b5b2d6c97e21cbed1d.jpg).",
+            f"𝙃𝙖𝙡𝙤 𝙎𝙖𝙮𝙖 {dispatcher.bot.first_name}. 𝙎𝙚𝙣𝙖𝙣𝙜 𝘽𝙚𝙧𝙩𝙚𝙢𝙪 𝘿𝙚𝙣𝙜𝙖𝙣 𝙈𝙪 👋.",
             parse_mode=ParseMode.HTML,
         )
 
@@ -388,7 +388,7 @@ def emiko_about_callback(update, context):
                     [
                         InlineKeyboardButton(
                             text="📠 𝙎𝙩𝙧𝙞𝙣𝙜 📠",
-                            callback_data="string",
+                            callback_data="emiko_notes",
                         ),
                     ],
                     [
@@ -433,10 +433,10 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_notes":
         query.message.edit_text(
-            text=f"<b>๏ Menyiapkan catatan</b>"
-            f"\nAnda dapat menyimpan pesan/media/audio atau apa pun sebagai catatan"
-            f"\nuntuk mendapatkan catatan cukup gunakan # di awal kata"
-            f"\n\nAnda juga dapat mengatur tombol untuk catatan dan filter (lihat menu bantuan)",
+            text=f"<b>๏ 𝙎𝙏𝙍𝙄𝙉𝙂 𝙎𝙀𝙎𝙎𝙄𝙊𝙉 𝘽𝙊𝙏</b>"
+            f"\n/start 𝙈𝙚𝙢𝙪𝙡𝙖𝙞 𝘽𝙤𝙩"
+            f"\n/ganerate 𝙈𝙪𝙡𝙖𝙞 𝙋𝙚𝙣𝙜𝙖𝙢𝙗𝙞𝙡𝙖𝙣 𝙎𝙩𝙧𝙞𝙣𝙜 𝙎𝙚𝙨𝙨𝙞𝙤𝙣"
+            f"\n\n/cancel 𝙈𝙚𝙢𝙗𝙖𝙩𝙖𝙡 𝙆𝙖𝙣 𝙋𝙚𝙣𝙜𝙖𝙢𝙗𝙞𝙡𝙖𝙣 𝙎𝙩𝙧𝙞𝙣𝙜",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Go Back", callback_data="emiko_")]]
