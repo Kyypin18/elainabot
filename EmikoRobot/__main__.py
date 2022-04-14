@@ -234,7 +234,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"👋 Hi, I'm {dispatcher.bot.first_name}. Nice to meet You.",
+            f"𝙃𝙖𝙡𝙤 𝙎𝙖𝙮𝙖 {dispatcher.bot.first_name}. 𝙎𝙚𝙣𝙖𝙣𝙜 𝘽𝙚𝙧𝙩𝙚𝙢𝙪 𝘿𝙚𝙣𝙜𝙖𝙣 𝙈𝙪 [👋](https://telegra.ph/file/f65b5b2d6c97e21cbed1d.jpg).",
             parse_mode=ParseMode.HTML,
         )
 
@@ -373,27 +373,27 @@ def emiko_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="𝙏𝙚𝙣𝙩𝙖𝙣𝙜", callback_data="emiko_admin"
+                            text="ℹ️ 𝙏𝙚𝙣𝙩𝙖𝙣𝙜 ℹ️", callback_data="emiko_admin"
                         ),
-                        InlineKeyboardButton(text="𝙈𝙪𝙨𝙞𝙘", callback_data="source_"),
+                        InlineKeyboardButton(text="🎧 𝙈𝙪𝙨𝙞𝙘 🎧", callback_data="source_"),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="𝘼𝙡𝙡 𝙂𝙧𝙤𝙪𝙥𝙨", callback_data="emiko_support"
+                            text="⛩️ 𝘼𝙡𝙡 𝙂𝙧𝙤𝙪𝙥𝙨 ⛩️", callback_data="emiko_support"
                         ),
                         InlineKeyboardButton(
-                            text="𝘾𝙧𝙚𝙙𝙞𝙩𝙨", callback_data="emiko_credit"
-                        ),
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            text="𝙊𝙬𝙣𝙚𝙧",
-                            url="https://t.me/skytrixsz",
+                            text="👩‍💻 𝘾𝙧𝙚𝙙𝙞𝙩𝙨 👩‍💻", callback_data="emiko_credit"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="𝙆𝙚𝙢𝙗𝙖𝙡𝙞", callback_data="emiko_back"
+                            text="📠 𝙎𝙩𝙧𝙞𝙣𝙜 📠",
+                            callback_data="string",
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="𝙆𝙚𝙢𝙗𝙖𝙡𝙞 🔙", callback_data="emiko_back"
                         ),
                     ],
                 ]
