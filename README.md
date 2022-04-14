@@ -7,7 +7,7 @@
 <p align="center">Toji Robot is a modular bot running on python3 with anime theme and have a lot features.</p>
 
 <p align="center">
-<a href="https://t.me/Aikarobot"> <img src="https://img.shields.io/badge/Emiko-Robot-blue?&logo=telegram" alt="Emiko on Telegram" /> </a><br>
+<a href="https://t.me/skytrixszbot"> <img src="https://img.shields.io/badge/Emiko-Robot-blue?&logo=telegram" alt="Emiko on Telegram" /> </a><br>
 <a href="https://python-telegram-bot.org"> <img src="https://img.shields.io/badge/PTB-13.10-white?&style=flat-round&logo=github" alt="Python Telegram Bot" /> </a>
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a><br>
 <a href="https://docs.telethon.dev"> <img src="https://img.shields.io/badge/Telethon-1.24.0-red?&style=flat-round&logo=github" alt="Telethon" /> </a>
@@ -39,9 +39,9 @@ This Bot is Created by KennedyProject, If your kanging this without fork at leas
 
 ### Support
 <p>
-<a href="https://t.me/excrybaby"> <img src="https://img.shields.io/badge/Sena-Ex-blue?&logo=telegram" alt="Sena on Telegram" /> </a><br>
-<a href="https://t.me/EmikoSupport"> <img src="https://img.shields.io/badge/Support-Chat-blue?&logo=telegram" alt="Support Chat" /> </a><br>
-<a href="https://t.me/KennedyProject"> <img src="https://img.shields.io/badge/Update-Channel-blue?&logo=telegram" alt="Update Channel" /> </a><br>
+<a href="https://t.me/wibuhouse"> <img src="https://img.shields.io/badge/Support-blue?&logo=telegram" alt="Support on Telegram" /> </a><br>
+<a href="https://t.me/wibulodging"> <img src="https://img.shields.io/badge/Support-Chat-blue?&logo=telegram" alt="Support Chat" /> </a><br>
+<a href="https://t.me/skytrixch"> <img src="https://img.shields.io/badge/Update-Channel-blue?&logo=telegram" alt="Update Channel" /> </a><br>
 </p>
 
 ## Credit 
