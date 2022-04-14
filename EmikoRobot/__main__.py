@@ -83,28 +83,27 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hᴀʟʟᴏ {} !*
-۞ sᴀʏᴀ ᴀᴅᴀʟᴀʜ ʀᴏʙᴏᴛ ᴍᴀɴᴀᴊᴇᴍᴇɴ ʙᴇʀᴛᴇᴍᴀ ᴡɪʙᴜ [🌟](https://telegra.ph/file/282542026d3570aedf7c1.jpg)
+× *sᴀʏᴀ ᴀᴅᴀʟᴀʜ ʀᴏʙᴏᴛ ᴍᴀɴᴀᴊᴇᴍᴇɴ ʙᴇʀᴛᴇᴍᴀ ᴡɪʙᴜ* [🌟](https://telegra.ph/file/f65b5b2d6c97e21cbed1d.jpg)
 ┏━━━━━━━━━━━━━━━━━━━━━━┓
 ┃ *ᴀᴋғɪғ sᴇʟᴀᴍᴀ:* `{}`
 ┃ `{}` *ᴘᴇɴɢɢᴜɴᴀ,* * ᴅᴀɴ,* `{}` *ᴏʙʀᴏʟᴀɴ.*
 ┗━━━━━━━━━━━━━━━━━━━━━━┛
-❀ 𝑻𝒂𝒑 /help 𝑨𝒕𝒂𝒖 𝑻𝒆𝒌𝒂𝒏 𝑻𝒐𝒎𝒃𝒐𝒍 𝑨𝒕𝒂𝒖 𝑩𝒖𝒕𝒕𝒐𝒏 𝑫𝒊 𝑩𝒂𝒘𝒂𝒉.
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="✘ 𝑨𝒃𝒐𝒖𝒕 ✘", callback_data="emiko_"),
+        InlineKeyboardButton(text="ℹ️ 𝙄𝙣𝙛𝙤 ℹ️", callback_data="emiko_"),
     ],
     [
-        InlineKeyboardButton(text="✘ 𝑶𝒘𝒏𝒆𝒓 ✘", url=f"t.me/skytrixsz"),
+        InlineKeyboardButton(text="👩‍💻 𝙊𝙬𝙣𝙚𝙧 👩‍💻", url=f"t.me/skytrixsz"),
     ],
     [
-        InlineKeyboardButton(text="⌘ 𝑴𝒆𝒏𝒖 ⌘", callback_data="help_back"),
-        InlineKeyboardButton(text="⌘ 𝑰𝒏𝒍𝒊𝒏𝒆 ⌘", switch_inline_query_current_chat=""),
+        InlineKeyboardButton(text="📚 𝙈𝙚𝙣𝙪", callback_data="help_back"),
+        InlineKeyboardButton(text="𝙄𝙣𝙡𝙞𝙣𝙚 📠", switch_inline_query_current_chat=""),
     ],
     [
         InlineKeyboardButton(
-            text="✙ 𝑻𝒂𝒎𝒃𝒂𝒉 𝑺𝒂𝒚𝒂 𝑲𝒆 𝑮𝒓𝒖𝒑 ✙", url=f"t.me/{bu}?startgroup=new"
+            text="🏘️ 𝙏𝙖𝙢𝙗𝙖𝙝 𝙎𝙖𝙮𝙖 𝙆𝙚 𝙂𝙧𝙪𝙥 𝙈𝙪 🏘️", url=f"t.me/{bu}?startgroup=new"
         ),
     ],
 ]
@@ -366,22 +365,15 @@ def emiko_about_callback(update, context):
     query = update.callback_query
     if query.data == "emiko_":
         query.message.edit_text(
-            text="๏ Saya *Toji*, bot manajemen grup yang kuat yang dibuat untuk membantu Anda mengelola grup dengan mudah."
-            "\n• Saya dapat membatasi pengguna."
-            "\n• Saya dapat menyapa pengguna dengan pesan selamat datang yang dapat disesuaikan dan bahkan menetapkan aturan grup."
-            "\n• Saya memiliki sistem anti-flood yang canggih."
-            "\n• Saya dapat memperingatkan pengguna sampai mereka mencapai peringatan maksimal, dengan setiap tindakan yang telah ditentukan seperti ban, mute, kick, etc."
-            "\n• Saya memiliki sistem pencatatan, blacklists, dan bahkan balasan yang telah ditentukan sebelumnya pada kata kunci tertentu."
-            "\n• Saya memeriksa izin admin sebelum menjalankan perintah apa pun dan lebih banyak barang"
-            "\n\n_Toji's dilisensikan di bawah Lisensi Publik Umum GNU v3.0_"
-            "\n\n Klik tombol di bawah untuk mendapatkan bantuan dasar untuk TojiRobot.",
+            text="๏ 𝙏𝙚𝙠𝙖𝙣 𝙏𝙤𝙢𝙗𝙤𝙡 𝘿𝙞 𝘽𝙖𝙬𝙖𝙝 𝙄𝙣𝙞 𝙐𝙣𝙩𝙪𝙠 𝙈𝙚𝙡𝙞𝙝𝙖𝙩 𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙨𝙞 𝙎𝙖𝙮𝙖."
+            "\n• @skytrixsz.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="Admins", callback_data="emiko_admin"
+                            text="𝙏𝙚𝙣𝙩𝙖𝙣𝙜", callback_data="emiko_admin"
                         ),
                         InlineKeyboardButton(text="Notes", callback_data="emiko_notes"),
                     ],
@@ -425,14 +417,13 @@ def emiko_about_callback(update, context):
 
     elif query.data == "emiko_admin":
         query.message.edit_text(
-            text=f"*๏ Ayo buat grup Anda sedikit efektif sekarang*"
-            "\nSelamat, TojiRobot sekarang siap untuk mengelola grup Anda."
-            "\n\n*Admin Peralatan*"
-            "\nAlat Admin dasar membantu Anda melindungi dan memperkuat grup Anda."
-            "\nAnda dapat mencekal anggota, Menendang anggota, Mempromosikan seseorang sebagai admin melalui perintah bot."
-            "\n\n*Salam pembuka*"
-            "\nMari atur pesan selamat datang untuk menyambut pengguna baru yang datang ke grup Anda."
-            "\nKirim `/setwelcome [pesan]` untuk mengatur pesan selamat datang!",
+            text=f"*᯽ 𝘼𝙗𝙤𝙪𝙩*"
+            "\n𝙏𝙤𝙟𝙞 𝘽𝙤𝙩 𝘼𝙙𝙖𝙡𝙖𝙝 𝙍𝙤𝙗𝙤𝙩 𝙈𝙚𝙣𝙚𝙟𝙚𝙢𝙚𝙣 𝘽𝙚𝙧𝙩𝙚𝙢𝙖 𝘼𝙣𝙞𝙢𝙚 𝙔𝙖𝙣𝙜 𝙈𝙪𝙣𝙜𝙠𝙞𝙣 𝘼𝙠𝙖𝙣 𝘿𝙞𝙠𝙚𝙢𝙗𝙖𝙣𝙜 𝙆𝙖𝙣 𝙇𝙚𝙗𝙞𝙝 𝙇𝙖𝙣𝙟𝙪𝙩."
+            "\n\n𝘽𝙤𝙩 𝙏𝙤𝙟𝙞 𝘽𝙚𝙠𝙚𝙧𝙟𝙖 𝙎𝙚𝙟𝙖𝙠 9 𝘼𝙥𝙧𝙞𝙡"
+            "\n𝘿𝙖𝙣 𝙈𝙚𝙢𝙗𝙖𝙣𝙩𝙪 𝘼𝙙𝙢𝙞𝙣 𝙈𝙚𝙣𝙟𝙖𝙜𝙖 𝙂𝙧𝙪𝙥 𝘼𝙜𝙖𝙧 𝙏𝙚𝙩𝙖𝙥 𝙀𝙛𝙚𝙠𝙩𝙞𝙛."
+            "\n𝘿𝙖𝙣 𝙋𝙚𝙧𝙞𝙣𝙩𝙖𝙝 𝘽𝙞𝙨𝙖 𝘿𝙞𝙟𝙖𝙡𝙖𝙣 𝙆𝙖𝙣 𝘿𝙞 𝘿𝙖𝙡𝙖𝙢 𝙂𝙧𝙪𝙥 𝘿𝙖𝙣 𝙅𝙪𝙜𝙖 𝙋𝙧𝙞𝙫𝙖𝙨𝙞 𝘽𝙤𝙩."
+            "\n\n𝗗𝗜𝗟𝗜𝗦𝗘𝗡𝗦𝗜 𝗗𝗜𝗕𝗔𝗪𝗔𝗛 𝗚𝗡𝗨 𝗔𝗙𝗙𝗘𝗥𝗢 𝗚𝗘𝗡𝗘𝗥𝗔𝗟 𝗣𝗨𝗕𝗟𝗜𝗖 𝗟𝗜𝗦𝗘𝗡𝗖𝗘 𝗩3.0"
+            "\n\n𝘿𝙄𝙆𝙀𝙈𝘽𝘼𝙉𝙂𝙆𝘼𝙉 𝙊𝙇𝙀𝙃 @skytrixsz.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
