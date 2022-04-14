@@ -1,4 +1,4 @@
-_mod_name_ = "string"
+_mod_name_ = "stringhelp"
 
 __help__ = """
   *𝙎𝙏𝙍𝙄𝙉𝙂𝙃𝙀𝙇𝙋*
