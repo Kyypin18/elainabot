@@ -46,4 +46,4 @@ This Bot is Created by KennedyProject, If your kanging this without fork at leas
 
 ## Credit 
 
-× [IKISAN](t.me/skytrixsz)
+× [IKISAN](https://github.com/kyypin18)
