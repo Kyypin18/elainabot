@@ -27,9 +27,9 @@ from traceback import format_exc
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Cutiepii_Robot import arq
-from Cutiepii_Robot.utils.errors import capture_err
-from Cutiepii_Robot import pgram, BOT_USERNAME
+from EmikoRobot import arq
+from EmikoRobot.utils.errors import capture_err
+from EmikoRobot import pgram, BOT_USERNAME
 
 
 
