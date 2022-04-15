@@ -96,6 +96,6 @@ file_helpo = file_help.replace("_", " ")
 
 __mod_name__ = "Telegraph"
 __help__ = """
- ❍ /tm :Get Telegraph Link Of Replied Media
- ❍ /txt :Get Telegraph Link of Replied Text
+ ❍ /tgm :Dapatkan Tautan Telegraf Media Balasan
+ ❍ /tgt :Dapatkan Tautan Telegraf dari Teks Balasan
 """
