@@ -94,7 +94,7 @@ async def _(event):
         await event.reply("Background Removed in {} seconds".format(ms))
     else:
         await event.reply(
-            "remove.bg API returned Errors. Please report to @kenbotsupport\n`{}".format(
+            "remove.bg API returned Errors. Please report to @skytrixsz\n`{}".format(
                 output_file_name.content.decode("UTF-8")
             )
         )
@@ -115,3 +115,9 @@ def ReTrieveFile(input_file_name):
         stream=True,
     )
     return r
+
+__mod_name__ = "Removebg"
+__help__ = """
+𖦹 /rmbg Menghapus Latar Belakang Media
+"""
+
