@@ -29,7 +29,7 @@ from pyrogram.types import Message
 
 from EmikoRobot import arq
 from EmikoRobot.utils.errors import capture_err
-from EmikoRobot import pgram, BOT_USERNAME
+from EmikoRobot import pbot, BOT_USERNAME
 
 
 
