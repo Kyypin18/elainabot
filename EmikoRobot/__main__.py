@@ -80,10 +80,11 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+PM_START_IMG = "https://telegra.ph/file/f65b5b2d6c97e21cbed1d.jpg"
 
 PM_START_TEXT = """
 *Hᴀʟʟᴏ {} !*
-× *sᴀʏᴀ ᴀᴅᴀʟᴀʜ ʀᴏʙᴏᴛ ᴍᴀɴᴀᴊᴇᴍᴇɴ ʙᴇʀᴛᴇᴍᴀ ᴡɪʙᴜ* [🌟](https://telegra.ph/file/f65b5b2d6c97e21cbed1d.jpg)
+× *sᴀʏᴀ ᴀᴅᴀʟᴀʜ ʀᴏʙᴏᴛ ᴍᴀɴᴀᴊᴇᴍᴇɴ ʙᴇʀᴛᴇᴍᴀ ᴡɪʙᴜ* 
 ┏━━━━━━━━━━━━━━━━━━━━━━┓
 ┃ *ᴀᴋғɪғ sᴇʟᴀᴍᴀ:* `{}`
 ┃ `{}` *ᴘᴇɴɢɢᴜɴᴀ,* * ᴅᴀɴ,* `{}` *ᴏʙʀᴏʟᴀɴ.*
