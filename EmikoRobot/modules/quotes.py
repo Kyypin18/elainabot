@@ -389,10 +389,10 @@ async def q(event):
     os.remove('sticker.webp')
     
     
-__mod_name__ = "QUOTLY🖼️"
+__mod_name__ = "QUOTLY"
 
 __help__ = """
-⚙️ 𝗔𝘃𝗮𝗶𝗹𝗮𝗯𝗹𝗲 𝗰𝗼𝗺𝗺𝗮𝗻𝗱:
-❦ /q [in response to the message]
-❦ make a quote from the message!
+⚙️ 𝙋𝙀𝙍𝙄𝙉𝙏𝘼𝙃 𝙔𝘼𝙉𝙂 𝙏𝙀𝙍𝙎𝙀𝘿𝙄𝘼:
+❦ /q [dalam menanggapi pesan]
+❦ buat kutipan dari pesan!
 """
